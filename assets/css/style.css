@@ -1,0 +1,15 @@
+.jumbotron {
+    background-image: url(../images/background.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    color: white;
+}
+
+.meal-image {
+    height: 150px;
+    margin: 5px;
+}
+
+.card {
+    margin: 10px;
+}
