@@ -43,7 +43,7 @@ $(document).ready(function() {
 
   // This time, our click event applies to every single crystal on the page. Not just one.
   $(".meal-image").on("click", function() {
-
+    
     // Determining the crystal's value requires us to extract the value from the data attribute.
     // Using the $(this) keyword specifies that we should be extracting the crystal value of the clicked crystal.
     // Using the .attr("data-crystalvalue") allows us to grab the value out of the "data-crystalvalue" attribute.
@@ -59,11 +59,11 @@ $(document).ready(function() {
     $("#your-score").text(counter);
 
     if (counter === targetNumber) {
-      alert("src", "assets/images/win.png");
+      alert("src", "assets/images/win.jpg");
     }
 
     else if (counter >= targetNumber) {
-      alert("src", "assets/images/lose.png");
+      alert("src", "assets/images/lose.jpg");
     }
 
   });
