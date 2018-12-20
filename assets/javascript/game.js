@@ -8,7 +8,7 @@ $(document).ready(function() {
   var counter = 0;
 
 
-  var numberOptions = [12, 5, 7, 1];
+  var numberOptions = [1, 5, 7, 3];
 
   for (var i = 0; i < numberOptions.length; i++) {
 
