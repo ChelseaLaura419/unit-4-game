@@ -1,4 +1,5 @@
-var targetNumber = 53;
+$(document).ready(function() {
+  var targetNumber = Math.floor(Math.random * 50);
 
   $("#number-to-guess").text(targetNumber);
 
@@ -40,7 +41,7 @@ var targetNumber = 53;
 
   // This time, our click event applies to every single crystal on the page. Not just one.
   $(".meal-image").on("click", function() {
-    console.log;
+
     // Determining the crystal's value requires us to extract the value from the data attribute.
     // Using the $(this) keyword specifies that we should be extracting the crystal value of the clicked crystal.
     // Using the .attr("data-crystalvalue") allows us to grab the value out of the "data-crystalvalue" attribute.
@@ -64,3 +65,5 @@ var targetNumber = 53;
     }
 
   });
+
+});
