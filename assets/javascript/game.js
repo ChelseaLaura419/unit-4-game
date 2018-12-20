@@ -1,6 +1,6 @@
-$(document).ready(function() {
-  
-  
+$(document).ready(function () {
+
+
   var targetNumber = Math.floor((Math.random() * 60) + 1);
 
   $("#number-to-guess").text(targetNumber);
@@ -25,7 +25,7 @@ $(document).ready(function() {
 
   }
 
-  $(".meal-image").on("click", function() {
+  $(".meal-image").on("click", function () {
 
     var mealValue = ($(this).attr("data-mealvalue"));
     mealValue = parseInt(mealValue);
@@ -37,11 +37,13 @@ $(document).ready(function() {
     if (counter === targetNumber) {
       wins++;
       alert("You Won!");
+      reset()
     }
 
     else if (counter >= targetNumber) {
       losses++;
       alert("You Lose!");
+      reset()
     }
 
     winsText.textContent = "Wins: " + wins;
@@ -49,4 +51,24 @@ $(document).ready(function() {
 
   });
 
+
+  function reset() {
+    counter = 0;
+    $("#your-score").text(counter);
+
+    targetNumber = Math.floor((Math.random() * 60) + 1);
+
+    $("#number-to-guess").text(targetNumber);
+    var numberOptions = [1, 5, 7, 3];
+
+    for (var i = 0; i < numberOptions.length; i++) {
+
+      var imageMeal = $("#meal" + i);
+
+
+      imageMeal.attr("data-mealvalue", numberOptions[i]);
+
+
+    }
+  }
 });
