@@ -1,5 +1,7 @@
 $(document).ready(function() {
-  var targetNumber = Math.floor(Math.random * 50);
+  
+  
+  var targetNumber = Math.floor((Math.random() * 60) + 1);
 
   $("#number-to-guess").text(targetNumber);
 
@@ -35,7 +37,7 @@ $(document).ready(function() {
     imageMeal.attr("data-mealvalue", numberOptions[i]);
 
     // Lastly, each crystal image (with all it classes and attributes) will get added to the page.
-    $(".meals").append(imageMeal);
+    $(".meal-image").append(imageMeal);
 
   }
 
@@ -54,14 +56,14 @@ $(document).ready(function() {
     counter += mealValue;
 
     // All of the same game win-lose logic applies. So the rest remains unchanged.
-    alert("New score: " + counter);
+    $("#your-score").text(counter);
 
     if (counter === targetNumber) {
-      alert("You win!");
+      alert("src", "assets/images/win.png");
     }
 
     else if (counter >= targetNumber) {
-      alert("You lose!!");
+      alert("src", "assets/images/lose.png");
     }
 
   });
